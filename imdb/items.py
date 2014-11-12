@@ -13,6 +13,7 @@ class ImdbItem(Item):
     title = Field()
     original_title = Field()
     year = Field()
+    episode = Field()
     description = Field()
     length = Field()
     director = Field()
@@ -21,7 +22,7 @@ class ImdbItem(Item):
     rating = Field()
     votes = Field()
 
-    # need this in order to enable the ImagePipelin
+    # need this in order to enable the ImagePipeline
     # this won't be persisted
     image_urls = Field()
     images = Field()

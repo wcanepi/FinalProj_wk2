@@ -4,7 +4,6 @@
 # See: http://doc.scrapy.org/topics/item-pipeline.html
 
 import pymysql
-
 from scrapy import log
 from scrapy.exceptions import DropItem
 
@@ -16,7 +15,7 @@ class ImdbPipeline(object):
         self.connection = pymysql.connect(host='localhost', port=3306, user='imdb', passwd='imdb123', db='imdb_toplist')
 
     def process_item(self, item, spider):
-        '''Process movie item. Expects item to be an ImbdItem object'''
+        '''Process series item. Expects item to be an ImbdItem object'''
 
         cursor = self.connection.cursor()
 

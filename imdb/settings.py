@@ -10,8 +10,8 @@ import os
 
 cwd = os.getcwd()
 
-BOT_NAME = 'imdb'
-BOT_VERSION = '1.0'
+# BOT_NAME = 'imdb'
+# BOT_VERSION = '1.0'
 
 SPIDER_MODULES = ['imdb.spiders']
 NEWSPIDER_MODULE = 'imdb.spiders'
@@ -24,10 +24,10 @@ IMAGES_THUMBS = {
     'large': (250, 250)
 }
 
-ITEM_PIPELINES = [
+ITEM_PIPELINES = {
     'scrapy.contrib.pipeline.images.ImagesPipeline',
     'imdb.pipelines.ImdbPipeline'
 #    'myproject.pipeline.JsonWriterPipeline',
-]
-USER_AGENT = '%s/%s' % (BOT_NAME, BOT_VERSION)
+}
+# USER_AGENT = '%s/%s' % (BOT_NAME, BOT_VERSION)
 
